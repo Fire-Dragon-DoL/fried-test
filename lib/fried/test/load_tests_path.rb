@@ -29,7 +29,7 @@ module Fried::Test
       end
     end
 
-    # @param [Void]
+    # @param [void]
     def call
       lib = get_test_directory.()
       prepend_to_load_path.(lib)

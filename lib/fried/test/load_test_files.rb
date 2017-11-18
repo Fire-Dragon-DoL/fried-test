@@ -25,7 +25,7 @@ module Fried::Test
       end
     end
 
-    # @return [Void]
+    # @return [void]
     def call
       test_files = get_test_files.()
       test_files.each { |file| require_relative file.to_s }

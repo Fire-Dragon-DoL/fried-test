@@ -15,7 +15,7 @@ module Fried::Test
       end
     end
 
-    # @return [Void]
+    # @return [void]
     def call
       return if target.nil?
 
