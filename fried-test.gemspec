@@ -28,6 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "pry-byebug"
 
+  spec.add_runtime_dependency "fried-core"
   spec.add_runtime_dependency "minitest"
   spec.add_runtime_dependency "minitest-reporters"
 end
