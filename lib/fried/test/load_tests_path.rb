@@ -6,7 +6,11 @@ module Fried
     # Puts tests path into {$LOAD_PATH}
     class LoadTestsPath
       class Substitute
+        include ::Fried::Test::Telemetry
+
         def call
+          record :call
+          nil
         end
       end
 

@@ -1,23 +1,15 @@
 require "fried/test/noop"
+require "fried/test/telemetry"
 
 module Fried
   module Test
     class Autorun
       class Substitute
-        private
-
-        attr_reader :calls
-
-        public
+        include ::Fried::Test::Telemetry
 
         def call
-          @calls ||= 0
-          @calls += 1
+          record :call
           nil
-        end
-
-        def was_called?(times = 1)
-          calls == times
         end
       end
 

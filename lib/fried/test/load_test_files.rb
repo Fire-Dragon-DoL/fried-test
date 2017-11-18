@@ -5,7 +5,11 @@ module Fried
     # Load test files using {require_relative}
     class LoadTestFiles
       class Substitute
+        include ::Fried::Test::Telemetry
+
         def call
+          record :call
+          nil
         end
       end
 
