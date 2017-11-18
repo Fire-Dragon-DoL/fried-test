@@ -1,4 +1,4 @@
-require "fried/test/load_test_file"
+require "fried/test/load_test_files"
 require "fried/test/load_tests_path"
 require "fried/test/autorun"
 

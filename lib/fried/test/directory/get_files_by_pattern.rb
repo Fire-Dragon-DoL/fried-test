@@ -15,7 +15,7 @@ module Fried
 
         # @see Dir.glob
         # @return [Array<String>]
-        def call(pattern, flags)
+        def call(pattern, flags = 0)
           return [] if dir.nil?
 
           dir.glob(pattern, flags)

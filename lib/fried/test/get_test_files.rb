@@ -24,7 +24,7 @@ module Fried
       end
 
       # @return [Enumerator<Pathname>]
-      def call(pattern, flags)
+      def call
         directory = get_test_directory.()
         pattern = directory.join(GlobPattern)
 

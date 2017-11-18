@@ -1,4 +1,5 @@
 require "fried/test/version"
+require "fried/test/cli"
 require "fried/test/activate"
 
 module Fried
