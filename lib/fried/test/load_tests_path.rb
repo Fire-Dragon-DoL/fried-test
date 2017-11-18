@@ -5,6 +5,11 @@ module Fried
   module Test
     # Puts tests path into {$LOAD_PATH}
     class LoadTestsPath
+      class Substitute
+        def call
+        end
+      end
+
       attr_accessor :get_test_directory
       attr_accessor :prepend_to_load_path
 

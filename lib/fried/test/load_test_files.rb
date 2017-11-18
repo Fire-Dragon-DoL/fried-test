@@ -4,6 +4,11 @@ module Fried
   module Test
     # Load test files using {require_relative}
     class LoadTestFiles
+      class Substitute
+        def call
+        end
+      end
+
       attr_accessor :get_test_files
 
       def initialize
