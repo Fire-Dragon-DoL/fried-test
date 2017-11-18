@@ -8,7 +8,8 @@ class GetTestFilesTest < Minitest::Spec
     get_test_files = GetTestFiles.new
 
     files = get_test_files.()
+    files = files.to_a
 
-    assert files.to_a.empty?
+    assert files.empty?
   end
 end
