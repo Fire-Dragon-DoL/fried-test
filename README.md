@@ -1,4 +1,4 @@
-# Fried::Test
+# Fried::Test [![Build Status][test-badge]][test-link]
 
 This gem provides a small executable named `friest` which is just an
 opinionated wrapper around `minitest/autorun`. You can run `friest` and it
@@ -86,3 +86,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/Fire-Dragon-DoL/fried-test.
+
+[test-badge]: https://travis-ci.org/Fire-Dragon-DoL/fried-test.svg?branch=master
+[test-link]: https://travis-ci.org/Fire-Dragon-DoL/fried-test
