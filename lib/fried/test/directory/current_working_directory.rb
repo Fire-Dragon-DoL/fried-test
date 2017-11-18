@@ -4,6 +4,22 @@ module Fried
   module Test
     module Directory
       class CurrentWorkingDirectory
+        class Substitute
+          private
+
+          attr_reader :path
+
+          public
+
+          def initialize(path = "/dev/null")
+            @path = path
+          end
+
+          def call
+            Pathname.new(path)
+          end
+        end
+
         attr_accessor :dir
 
         def self.build
