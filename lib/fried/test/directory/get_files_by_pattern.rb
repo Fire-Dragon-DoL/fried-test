@@ -1,4 +1,5 @@
 require "pathname"
+require "fried/test/telemetry"
 
 module Fried
   module Test
@@ -6,30 +7,21 @@ module Fried
       # Behaves like {Dir.glob}
       class GetFilesByPattern
         class Substitute
-          Args = Struct.new(:pattern, :flag)
+          include ::Fried::Test::Telemetry
 
           private
 
           attr_reader :files
-          attr_reader :calls
 
           public
 
           def initialize(files = [])
             @files = files
-            @calls = []
           end
 
           def call(pattern, flag = 0)
-            calls << Args.new(pattern, flag)
+            record :call, [pattern, flag]
             files.map(&:to_s)
-          end
-
-          def was_called_with?(pattern, flag = 0)
-            calls.any? do |args|
-              args.pattern == pattern &&
-              args.flag == flag
-            end
           end
         end
 

@@ -28,7 +28,7 @@ class GetTestFilesTest < Minitest::Spec
 
     get_test_files.()
 
-    assert get_files_by_pattern.was_called_with?(pattern)
+    assert get_files_by_pattern.recorded_with?(:call, [pattern, 0])
   end
 
   it "searches for files in test directory" do

@@ -18,7 +18,7 @@ class GetFilesByPatternSubstituteTest < Minitest::Spec
 
     get_files_by_pattern.("./foo/*_.baz", 1)
 
-    assert get_files_by_pattern.was_called_with?("./foo/*_.baz", 1)
+    assert get_files_by_pattern.recorded_with?(:call, ["./foo/*_.baz", 1])
   end
 
   it "keeps track of multiple invocations" do
@@ -27,6 +27,6 @@ class GetFilesByPatternSubstituteTest < Minitest::Spec
     get_files_by_pattern.("./foo/*_.baz", 1)
     get_files_by_pattern.("./**/*")
 
-    assert get_files_by_pattern.was_called_with?("./foo/*_.baz", 1)
+    assert get_files_by_pattern.recorded_with?(:call, ["./foo/*_.baz", 1])
   end
 end
