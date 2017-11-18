@@ -5,6 +5,22 @@ module Fried
     module Directory
       # Behaves like {Dir.glob}
       class GetFilesByPattern
+        class Substitute
+          private
+
+          attr_reader :files
+
+          public
+
+          def initialize(files = [])
+            @files = files
+          end
+
+          def call(pattern, flag = 0)
+            files.map(&:to_s)
+          end
+        end
+
         attr_accessor :dir
 
         def self.build
