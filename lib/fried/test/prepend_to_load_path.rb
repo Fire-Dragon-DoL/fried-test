@@ -20,7 +20,7 @@ module Fried
         text_path = path.to_s
 
         has_path = load_path.include?(text_path)
-        load_path.unshift(text_path) if has_path
+        load_path.unshift(text_path) unless has_path
 
         has_path
       end
