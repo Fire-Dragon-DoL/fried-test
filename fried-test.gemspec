@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Minitest helpers and testing philosophy}
   spec.homepage      = "https://github.com/Fire-Dragon-DoL/fried-test"
   spec.metadata      = {
-    "source_code_uri" => "https://github.com/Fire-Dragon-DoL/fried-typings"
+    "source_code_uri" => "https://github.com/Fire-Dragon-DoL/fried-test"
   }
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
