@@ -8,3 +8,5 @@ task :test do
 
   Fried::Test::CLI.()
 end
+
+task default: :test
