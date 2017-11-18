@@ -22,7 +22,7 @@ module Fried
         has_path = load_path.include?(text_path)
         load_path.unshift(text_path) unless has_path
 
-        has_path
+        !has_path
       end
 
       def self.call
