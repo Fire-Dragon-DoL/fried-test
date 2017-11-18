@@ -1,9 +1,9 @@
 # Fried::Test
 
-This gem provides a small text executable named `friest` which is just a
-wrapper around `minitest/autorun`. You can run `friest` and it will run the
-test suite automatically for any test found in the directory `test` with any
-file ending with `_test.rb`.
+This gem provides a small executable named `friest` which is just an
+opinionated wrapper around `minitest/autorun`. You can run `friest` and it
+will run the test suite automatically for any test found in the directory
+`test` with any file ending with `_test.rb`.
 
 ## Philosophy
 
