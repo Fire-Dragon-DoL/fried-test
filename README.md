@@ -12,7 +12,7 @@ Tests API should be so simple that any Ruby developer can jump in and use it.
 
 Here is how your tests should look:
 
-```
+```ruby
 require "test_helper"
 
 class HelloWorldTest < Minitest::Spec
@@ -41,7 +41,7 @@ You are not allowed to use `describe` (it creates nested classes).
 
 If you have to share tests between classes, use:
 
-```
+```ruby
 module MySharedTest
   it "has value equal to 0" do
     assert @value == 0
