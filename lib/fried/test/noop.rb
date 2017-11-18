@@ -1,5 +1,5 @@
-module Fried
-  module Test
-    Noop = ->(*,**) {}.freeze
-  end
+require "fried/core"
+
+module Fried::Test
+  Noop = ->(*,**) {}.freeze
 end

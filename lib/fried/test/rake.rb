@@ -1,10 +1,17 @@
 require "rake"
+require "fried/core"
 
-task :test do
-  lib = File.expand_path("../../../", __FILE__)
-  $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+module Fried::Test
+  module Rake
+    extend ::Rake::DSL
 
-  require "fried/test"
+    task :test do
+      lib = File.expand_path("../../../", __FILE__)
+      $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-  Fried::Test::CLI.()
+      require "fried/test"
+
+      Fried::Test::CLI.()
+    end
+  end
 end
