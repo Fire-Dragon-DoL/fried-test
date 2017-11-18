@@ -8,10 +8,14 @@ Gem::Specification.new do |spec|
   spec.version       = Fried::Test::VERSION
   spec.authors       = ["Fire-Dragon-DoL"]
   spec.email         = ["francesco.belladonna@gmail.com"]
+  spec.licenses      = ["MIT"]
 
   spec.summary       = %q{Minitest helpers and testing philosophy}
   spec.description   = %q{Minitest helpers and testing philosophy}
   spec.homepage      = "https://github.com/Fire-Dragon-DoL/fried-test"
+  spec.metadata      = {
+    "source_code_uri" => "https://github.com/Fire-Dragon-DoL/fried-typings"
+  }
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
