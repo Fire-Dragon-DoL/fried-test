@@ -4,6 +4,22 @@ require "fried/test/directory/current_working_directory"
 module Fried
   module Test
     class GetTestDirectory
+      class Substitute
+        private
+
+        attr_reader :test_path
+
+        public
+
+        def initialize(test_path)
+          @test_path = test_path
+        end
+
+        def call
+          Pathname.new(test_path)
+        end
+      end
+
       attr_accessor :current_working_directory
 
       def initialize
