@@ -1,12 +1,12 @@
+require "fried/test/noop"
+
 module Fried
   module Test
     class Autorun
-      ExecuteNoop = ->(file) {}.freeze
-
       attr_accessor :execute
 
       def initialize
-        @execute = ExecuteNoop
+        @execute = Noop
       end
 
       def self.build
