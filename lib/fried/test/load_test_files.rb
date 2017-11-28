@@ -1,5 +1,6 @@
 require "fried/core"
 require "fried/test/get_test_files"
+require "fried/test/options"
 
 module Fried::Test
   # Load test files using {require_relative}
@@ -25,15 +26,25 @@ module Fried::Test
       end
     end
 
+    def self.call(options = Options::Default)
+      instance = build
+      instance.(options)
+    end
+
     # @return [void]
-    def call
-      test_files = get_test_files.()
+    def call(options = Options::Default)
+      test_files = fetch_files(options)
       test_files.each { |file| require_relative file.to_s }
     end
 
-    def self.call
-      instance = build
-      instance.()
+    private
+
+    def fetch_files(options)
+      if options.single_file?
+        get_single_test_file.(options.file)
+      else
+        get_test_files.()
+      end
     end
   end
 end
