@@ -73,7 +73,7 @@ Or install it yourself as:
 Then require **and activate** the gem in your `test_helper.rb`
 
 ```ruby
-require "fried-test"
+require "fried/test"
 Fried::Test.activate
 ```
 
