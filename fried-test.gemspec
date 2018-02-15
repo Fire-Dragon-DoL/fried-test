@@ -31,4 +31,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "fried-core"
   spec.add_runtime_dependency "minitest"
   spec.add_runtime_dependency "minitest-reporters"
+  spec.add_runtime_dependency "minitest-focus"
 end

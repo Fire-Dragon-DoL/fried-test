@@ -5,6 +5,9 @@ opinionated wrapper around `minitest/autorun`. You can run `friest` and it
 will run the test suite automatically for any test found in the directory
 `test` with any file ending with `_test.rb`.
 
+It automatically includes (and uses) the Progress Report (you can overwrite
+it), and `minitest-focus` for when you need it.
+
 ## Philosophy
 
 This gem is mainly a **philosophy** on how your tests should be written.
